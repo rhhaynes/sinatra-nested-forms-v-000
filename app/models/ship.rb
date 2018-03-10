@@ -10,7 +10,8 @@ class Ship
     SHIPS.clear
   end
   
-  def initialize()
+  def initialize(attributes)
+    attributes.each{|k,v| self.send("#{k}=",v)}
     SHIPS << self
   end
 end
