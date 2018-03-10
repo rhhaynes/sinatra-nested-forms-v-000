@@ -9,7 +9,7 @@ module FormsLab
     
     post '/pirates' do
       ship_params = params[:pirate].delete(:ships)
-      
+      ship_params.each{|attributes| Ship.new(attributes)}
       @ships = Ship.all
       
       pirate_params = params[:pirate]
