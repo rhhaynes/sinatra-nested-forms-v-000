@@ -1,7 +1,23 @@
-<h1>Display your Pirate here</h1>
-
-
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pirates</title>
+</head>
+<body>
+  <h2>Pirate</h2>
+  <p>
+    Pirate Name:   <%=@pirate.name%><br>
+    Pirate Weight: <%=@pirate.weight%><br>
+    Pirate Height: <%=@pirate.height%>
+  </p>
+  <%@ships.each.with_index(1) do |ship,i|%>
+    <h2>Ship <%=i%></h2>
+    <p>
+      Ship Name:  <%=ship.name%><br>
+      Ship Type:  <%=ship.type%><br>
+      Ship Booty: <%=ship.booty%>
+    </p>
+  <%end%>
+</body>
+</html>
