@@ -8,10 +8,12 @@ module FormsLab
     end
     
     post '/pirates' do
-      pirate_params = params[:pirate]
-      ship_params   = params[:pirate][:ships]
+      ship_params = params[:pirate].delete(:ships)
       
-      @pirate = Pirate.new(params[pirate])
+      @ships = Ship.all
+      
+      pirate_params = params[:pirate]
+      @pirate = Pirate.new(pirate_params)
       
       erb :'pirates/show'
     end
