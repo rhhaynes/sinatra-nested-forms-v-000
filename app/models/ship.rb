@@ -1,5 +1,5 @@
 class Ship
-  attr_reader :name, :type, :booty
+  attr_accessor :name, :type, :booty
   SHIPS = []
   
   def self.all
