@@ -5,8 +5,8 @@
   Pirate Height: <%=@pirate.height%>
 </p>
 
-<h2>Ship 1</h2>
-<%@ships.each do |ship|%>
+<%@ships.each_with_index(1) do |ship,i|%>
+  <h2>Ship <%=i%></h2>
   <p>
     <%=%>
     <%=%>
