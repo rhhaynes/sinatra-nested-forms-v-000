@@ -7,6 +7,9 @@ class Pirate
   end
   
   def initialize()
+    attributes.each do |k,v|
+      self.send("#{k}=",v)
+    end
     PIRATES << self
   end
 
